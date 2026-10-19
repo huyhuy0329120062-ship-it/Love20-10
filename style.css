@@ -1,0 +1,800 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient( 135deg, #ffd6e7, #fff0f5, #ffc1d9 );
+    overflow: hidden;
+}
+
+/* Hộp chính */
+
+.love-box {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 45px 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(255, 80, 130, 0.25);
+    animation: appear 1s ease;
+}
+
+/* Trái tim */
+
+.heart {
+    font-size: 70px;
+    margin-bottom: 15px;
+    animation: heartbeat 1s infinite;
+}
+
+/* Câu hỏi */
+
+h1 {
+    color: #ff4f81;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Hai nút */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    border: none;
+    padding: 14px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Nút Có */
+
+#yesBtn {
+    background: #ff4f81;
+    color: white;
+}
+
+    #yesBtn:hover {
+        transform: scale(1.1);
+        background: #ff2f6d;
+    }
+
+/* Nút Không */
+
+#noBtn {
+    background: #eeeeee;
+    color: #555;
+}
+
+    #noBtn:hover {
+        transform: scale(1.05);
+    }
+
+/* Dòng thông báo */
+
+#message {
+    margin-top: 25px;
+    color: #ff4f81;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* Hiệu ứng xuất hiện */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hiệu ứng tim đập */
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Điện thoại */
+
+@media (max-width: 600px) {
+
+    .love-box {
+        width: 90%;
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .heart {
+        font-size: 60px;
+    }
+
+    button {
+        padding: 13px 25px;
+        font-size: 16px;
+    }
+}
+/* =================================
+   CÁC MÀN HÌNH
+================================= */
+
+.screen {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* Ẩn màn hình */
+
+.hidden {
+    display: none;
+}
+
+
+/* =================================
+   FORM ĐĂNG NHẬP
+================================= */
+
+.login-box {
+    width: 90%;
+    max-width: 430px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 35px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(255, 79, 129, 0.25);
+    text-align: center;
+    animation: loginAppear 0.8s ease;
+}
+
+
+.login-heart {
+    font-size: 65px;
+    margin-bottom: 10px;
+    animation: heartbeat 1s infinite;
+}
+
+
+.login-box h1 {
+    margin-bottom: 10px;
+    color: #ff4f81;
+}
+
+
+.login-description {
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+
+/* ================================
+   INPUT
+================================ */
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+    .input-group label {
+        display: block;
+        color: #555;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+
+    .input-group input {
+        width: 100%;
+        padding: 14px 16px;
+        border: 2px solid #ffd2df;
+        border-radius: 15px;
+        outline: none;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+
+        .input-group input:focus {
+            border-color: #ff4f81;
+            box-shadow: 0 0 0 4px rgba(255, 79, 129, 0.1);
+        }
+
+
+/* ================================
+   NÚT ĐĂNG NHẬP
+================================ */
+
+#loginBtn {
+    width: 100%;
+    margin-top: 5px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient( 135deg, #ff4f81, #ff779d );
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+    #loginBtn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255, 79, 129, 0.3);
+    }
+
+
+/* Thông báo đăng nhập */
+
+#loginMessage {
+    min-height: 25px;
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+
+/* ================================
+   HIỆU ỨNG
+================================ */
+
+@keyframes loginAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+/* =================================
+   MÀN HÌNH MÓN QUÀ
+================================= */
+
+#giftScreen {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: linear-gradient( 135deg, #fff0f5, #ffd6e7, #fff5f8 );
+}
+
+
+/* =================================
+   THIỆP
+================================= */
+
+.gift-card {
+    position: relative;
+    z-index: 10;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 35px;
+    text-align: center;
+    box-shadow: 0 20px 70px rgba(255, 79, 129, 0.25);
+    animation: giftAppear 1.2s ease;
+}
+
+
+.small-title {
+    color: #999;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+
+.gift-title {
+    font-size: 36px;
+    color: #ff477e;
+    margin-bottom: 15px;
+    text-shadow: 0 3px 15px rgba(255, 71, 126, 0.15);
+}
+
+
+.flower-line {
+    font-size: 25px;
+    margin-bottom: 25px;
+    letter-spacing: 5px;
+}
+
+
+/* =================================
+   KHUNG ẢNH
+================================= */
+
+.photo-frame {
+    width: 270px;
+    height: 340px;
+    margin: 0 auto 25px auto;
+    padding: 8px;
+    border-radius: 25px;
+    background: linear-gradient( 135deg, #ff7ca3, #ffd1df, #ff477e );
+    box-shadow: 0 15px 40px rgba(255, 71, 126, 0.3);
+    transform: rotate(-2deg);
+    transition: 0.4s;
+}
+
+
+    .photo-frame:hover {
+        transform: rotate(0deg) scale(1.03);
+    }
+
+
+.girlfriend-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 19px;
+    display: block;
+}
+
+
+/* =================================
+   TEXT
+================================= */
+
+.her-name {
+    color: #ff477e;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+
+.gift-intro {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+   NÚT MỞ THƯ
+================================= */
+
+#openLetterBtn {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient( 135deg, #ff477e, #ff85a7 );
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(255, 71, 126, 0.3);
+    transition: 0.3s;
+}
+
+
+    #openLetterBtn:hover {
+        transform: translateY(-3px) scale(1.03);
+    }
+
+
+/* =================================
+   BỨC THƯ
+================================= */
+
+.love-letter {
+    margin-top: 35px;
+    padding: 30px;
+    background: linear-gradient( 135deg, #fff9fb, #fff0f5 );
+    border: 2px solid #ffd4e0;
+    border-radius: 25px;
+    text-align: left;
+    animation: letterOpen 1s ease;
+}
+
+
+    .love-letter h2 {
+        text-align: center;
+        color: #ff477e;
+        margin-bottom: 25px;
+        font-size: 27px;
+    }
+
+
+.letter-heart {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 10px;
+    animation: heartbeat 1s infinite;
+}
+
+
+.love-letter p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+.love-letter .final-message {
+    text-align: center;
+    color: #ff477e;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+
+.love-letter .love-you {
+    text-align: center;
+    color: #ff2f6d;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+
+.signature {
+    text-align: right;
+    color: #999;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+
+/* =================================
+   HOA VÀ TIM RƠI
+================================= */
+
+#fallingContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.falling-item {
+    position: absolute;
+    top: -50px;
+    animation: falling linear forwards;
+    user-select: none;
+}
+
+
+/* =================================
+   ANIMATION
+================================= */
+
+@keyframes giftAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+@keyframes letterOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+@keyframes falling {
+
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.3;
+    }
+}
+
+
+/* =================================
+   ĐIỆN THOẠI
+================================= */
+
+@media (max-width: 600px) {
+
+    #giftScreen {
+        padding: 25px 10px;
+    }
+
+
+    .gift-card {
+        width: 95%;
+        padding: 30px 17px;
+        border-radius: 25px;
+    }
+
+
+    .gift-title {
+        font-size: 27px;
+    }
+
+
+    .photo-frame {
+        width: 220px;
+        height: 280px;
+    }
+
+
+    .her-name {
+        font-size: 24px;
+    }
+
+
+    .love-letter {
+        padding: 25px 18px;
+    }
+
+
+        .love-letter p {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+}
+/* =================================
+   MÀN HÌNH MỞ QUÀ
+================================= */
+
+#presentScreen {
+    position: relative;
+    background: radial-gradient( circle at center, #fff8fb, #ffd9e5, #ffb9cf );
+    overflow: hidden;
+}
+
+
+/* Hộp nội dung */
+
+.present-box {
+    width: 90%;
+    max-width: 500px;
+    padding: 50px 30px;
+    text-align: center;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 35px;
+    box-shadow: 0 25px 70px rgba(255,70,120,0.25);
+    animation: presentAppear 1s ease;
+}
+
+
+.present-small-text {
+    color: #999;
+    margin-bottom: 20px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+
+/* ===============================
+   HỘP QUÀ
+================================ */
+
+.gift-icon {
+    font-size: 100px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    animation: giftShake 2s ease-in-out infinite;
+    filter: drop-shadow( 0 12px 12px rgba(255,70,120,0.25) );
+}
+
+
+.present-box h1 {
+    color: #ff477e;
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+
+.present-box p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* Nút mở quà */
+
+#openGiftBtn {
+    border: none;
+    padding: 15px 38px;
+    border-radius: 50px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient( 135deg, #ff3f76, #ff86a6 );
+    box-shadow: 0 10px 25px rgba(255,63,118,0.35);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+    #openGiftBtn:hover {
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: 0 15px 30px rgba(255,63,118,0.4);
+    }
+
+
+.present-hint {
+    margin-top: 18px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+
+/* =================================
+   ANIMATION HỘP QUÀ
+================================= */
+
+@keyframes giftShake {
+
+    0%, 100% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    10% {
+        transform: rotate(-5deg) scale(1.05);
+    }
+
+    20% {
+        transform: rotate(5deg) scale(1.05);
+    }
+
+    30% {
+        transform: rotate(-4deg);
+    }
+
+    40% {
+        transform: rotate(4deg);
+    }
+
+    50% {
+        transform: rotate(0deg) scale(1.08);
+    }
+}
+
+
+@keyframes presentAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+/* =================================
+   HIỆU ỨNG ẢNH
+================================= */
+
+.photo-frame {
+    position: relative;
+    animation: photoAppear 1.5s ease, photoFloat 4s ease-in-out 1.5s infinite;
+}
+
+
+    /* Ánh sáng sau ảnh */
+
+    .photo-frame::before {
+        content: "";
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        width: calc(100% + 24px);
+        height: calc(100% + 24px);
+        border-radius: 32px;
+        background: linear-gradient( 45deg, #ff477e, #ffd6e2, #ff8eaa, #ffd6e2 );
+        z-index: -1;
+        filter: blur(15px);
+        opacity: 0.55;
+        animation: photoGlow 2s ease-in-out infinite alternate;
+    }
+
+
+@keyframes photoAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.6) rotate(-8deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(-2deg);
+    }
+}
+
+
+@keyframes photoFloat {
+
+    0%, 100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+}
+
+
+@keyframes photoGlow {
+
+    from {
+        opacity: 0.3;
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 0.7;
+        transform: scale(1.04);
+    }
+}

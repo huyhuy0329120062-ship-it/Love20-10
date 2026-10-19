@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Gửi đến em ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         MÀN HÌNH CÂU HỎI
+    ========================== -->
+
+    <div id="questionScreen" class="screen">
+
+        <div class="love-box">
+
+            <div class="heart">❤️</div>
+
+            <h1>Em có yêu anh hông nè??</h1>
+
+            <p class="subtitle">
+                Trả lời thật lòng nha 😚
+            </p>
+
+
+            <div class="buttons">
+
+                <button id="yesBtn">
+                    Có ❤️
+                </button>
+
+                <button id="noBtn">
+                    Không 😒
+                </button>
+
+            </div>
+
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         MÀN HÌNH ĐĂNG NHẬP
+    ========================== -->
+
+    <div id="loginScreen"
+         class="screen hidden">
+
+        <div class="login-box">
+
+            <div class="login-heart">
+                💗
+            </div>
+
+            <h1> bé ❤️</h1>
+
+            <p class="login-description">
+                Nhập mật mã để mở món quà của anh nha
+            </p>
+
+
+            <!-- Tên đăng nhập -->
+
+            <div class="input-group">
+
+                <label>
+                    Tên đăng nhập
+                </label>
+
+                <input type="text"
+                       id="username"
+                       placeholder="Tên em đó B..."
+                       autocomplete="off">
+
+            </div>
+
+
+            <!-- Mật khẩu -->
+
+            <div class="input-group">
+
+                <label>
+                    Mật khẩu
+                </label>
+
+                <input type="password"
+                       id="password"
+                       placeholder="Mật khẩu là ngày sinh của anh và em">
+
+            </div>
+
+
+            <!-- Nút đăng nhập -->
+
+            <button id="loginBtn">
+
+                Mở món quà 💌
+
+            </button>
+
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+    </div>
+    <!-- =========================
+         MÀN HÌNH MÓN QUÀ 20/10
+    ========================== -->
+    <!-- =========================
+         MÀN HÌNH MỞ QUÀ
+    ========================== -->
+
+    <div id="presentScreen" class="screen hidden">
+
+        <div class="present-box">
+
+            <div class="present-small-text">
+                Có một món quà nhỏ dành cho em...
+            </div>
+
+            <div class="gift-icon">
+                🎁
+            </div>
+
+            <h1>
+                Gửi đến Bình ❤️
+            </h1>
+
+            <p>
+                Anh có một điều muốn gửi đến em
+                trong ngày 20/10 này 🌷
+            </p>
+
+            <button id="openGiftBtn">
+                Mở quà ❤️
+            </button>
+
+            <div class="present-hint">
+                Bấm vào để xem nha 😚
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="giftScreen" class="screen hidden">
+
+        <!-- Nơi tạo hoa và tim rơi -->
+        <div id="fallingContainer"></div>
+
+        <div class="gift-card">
+
+            <div class="small-title">
+                💕 Gửi đến cô gái đặc biệt của anh 💕
+            </div>
+
+            <h1 class="gift-title">
+                CHÚC MỪNG 20/10
+            </h1>
+
+            <div class="flower-line">
+                🌷 🌸 ❤️ 🌸 🌷
+            </div>
+
+            <!-- Ảnh -->
+            <div class="photo-frame">
+
+                <img src="images/binh.jpg"
+                     alt="Bình ❤️"
+                     class="girlfriend-photo">
+
+            </div>
+
+            <h2 class="her-name">
+                Gửi cho cô gái xinh nhất của anh ❤️
+            </h2>
+
+            <p class="gift-intro">
+                Anh có một vài điều muốn nói với em...
+            </p>
+
+            <button id="openLetterBtn">
+                Mở thư của Q.Huyy nè 💌
+            </button>
+
+
+            <!-- BỨC THƯ -->
+
+            <div id="loveLetter" class="love-letter hidden">
+
+                <div class="letter-heart">
+                    ❤️
+                </div>
+
+                <h2>
+                    Gửi em ❤️
+                </h2>
+
+                <p>
+                    Chúc em một ngày 20/10 thật vui vẻ,
+                    luôn xinh đẹp và luôn có thật nhiều
+                    niềm vui trong cuộc sống.
+                </p>
+
+                <p>
+                    Anh mong rằng không chỉ hôm nay,
+                    mà mỗi ngày sau này em đều có thể
+                    cười thật nhiều.
+                </p>
+
+                <p>
+                    Cảm ơn em vì đã đến và trở thành người con gái  
+                    đặc biệt đối với anh. Dù đôi lúc anh không thể 
+                    ở bên cạnh em,nhưng anh vẫn luôn mong những điều
+                    tốt đẹp nhất sẽ đến với em.
+                </p>
+                <p class="love-you">
+                    Anh yêu em ❤️
+                </p>
+
+                <div class="signature">
+                    20 / 10 / 2026 💕
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <audio id="backgroundMusic" loop>
+        <source src="music/love.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
